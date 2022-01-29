@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% from "includes/registerFormHelpers.html" import render_field %}
+
+<form method=post>
+    <dl>
+      {{ render_field(form.username) }}
+      {{ render_field(form.password) }}
+    </dl>
+    <p><input type=submit value=Register>
+  </form>
+
+{% endblock body %}
